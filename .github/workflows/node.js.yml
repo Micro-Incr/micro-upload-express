@@ -34,9 +34,9 @@ jobs:
         with:
           mongodb-version: ${{ matrix.mongodb-version }}
 
-      - run: npm ci
+      - run: yarn
 
-      - run: npm run build --if-present
-      - run: npm test
+      - run: yarn run build --if-present
+      - run: yarn test
         env:
           DATABASE_URI_TEST: mongodb://localhost:27017/upload_test
