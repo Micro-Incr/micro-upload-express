@@ -17,6 +17,7 @@
     "@types/async": "^3.2.5",
     "@types/eslint": "^7.2.6",
     "@types/express": "^4.17.11",
+    "@types/mz": "^2.7.3",
     "@types/node": "^14.14.31",
     "@types/nodemailer": "^6.4.0",
     "@types/passport": "^1.0.6",

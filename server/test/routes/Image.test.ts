@@ -1,4 +1,3 @@
-import 'dotenv/config';
 import Image from '../../models/Image';
 import supertest from 'supertest';
 import app from '../../app';
@@ -52,7 +51,6 @@ describe('Image routes test', () => {
     });
 
     afterEach(async (done) => {
-      console.log(filePath);
       filePath = path.join(__dirname, '..', '../images/dev/') + image;
       fs.unlinkSync(filePath);
       done();
@@ -129,7 +127,6 @@ describe('Image routes test', () => {
     });
 
     afterEach(async (done) => {
-      console.log(filePath);
       filePath = path.join(__dirname, '..', '../images/dev/') + image;
       fs.unlinkSync(filePath);
       done();
