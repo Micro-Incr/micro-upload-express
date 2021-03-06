@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "jest --detectOpenHandles ",
-    "test:watch": "jest --watch",
+    "test": "jest --detectOpenHandles --watch",
     "dev": "nodemon ./server/server.ts",
     "eslint": "eslint .",
     "eslint:fix": "eslint . --fix",
@@ -35,7 +34,9 @@
   },
   "dependencies": {
     "@types/cors": "^2.8.10",
+    "@types/jest": "^26.0.20",
     "@types/mongoose": "^5.10.3",
+    "@types/multer": "^1.4.5",
     "@types/nodemon": "^1.19.0",
     "@types/supertest": "^2.0.10",
     "bcrypt": "^5.0.1",
@@ -46,6 +47,7 @@
     "lint-staged": "^10.5.3",
     "mock-mongoose": "^8.0.1-a",
     "mongoose": "^5.11.18",
+    "multer": "^1.4.2",
     "mz": "^2.7.0",
     "nodemailer": "^6.5.0",
     "passport": "^0.4.1",

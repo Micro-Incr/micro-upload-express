@@ -11,6 +11,7 @@ beforeAll(async (done) => {
     done();
 });
 
+
 it('Gets the invalid endpoint and return a 404 status', async (done) => {
     const response = await request.get('/test');
     expect(response.status).toBe(404);
