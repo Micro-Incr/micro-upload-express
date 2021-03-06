@@ -1,7 +1,5 @@
-import 'dotenv/config';
 import express, {Application} from 'express';
 import cors from 'cors';
-import './utils/db'
 // routes
 import ImageRoute from './routes/Image.route';
 

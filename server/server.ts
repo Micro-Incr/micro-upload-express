@@ -1,6 +1,11 @@
+import 'dotenv/config';
 import app from './app';
 import {PORT} from './config/baseConfig';
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+import connect from './utils/db';
+
+connect.then(() => {
+    app.listen(PORT, () => {
+        console.log(`Server is running on port ${PORT}`);
+    });
 });

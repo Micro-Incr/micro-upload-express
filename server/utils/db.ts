@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
-import {DATABASE_URI} from './../config/baseConfig'
+import {DATABASE_URI} from '../config/baseConfig';
 
-mongoose.connect(DATABASE_URI!, {
+export default mongoose.connect(DATABASE_URI!, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useFindAndModify: false,
