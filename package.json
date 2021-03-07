@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "start": "tsc && node ./dist/server.js",
     "test": "jest --detectOpenHandles",
     "test:watch": "jest --watch",
     "dev": "nodemon ./server/server.ts",
