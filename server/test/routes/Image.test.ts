@@ -20,9 +20,8 @@ beforeAll(async (done) => {
 async function uploadImageTestHelper() {
   const res = await request.post('/api/v1/images')
     .attach('image', path.join(__dirname, '..', '/mock/mock.png'));
-  expect(res.status).toBe(201);
-  image = res.body.data.image;
-  id = res.body.data._id;
+  image = res.body.image;
+  id = res.body._id;
   filePath = path.join(__dirname, '..', '../images/dev/') + image;
   return res;
 }
@@ -40,7 +39,7 @@ describe('Image routes test', () => {
   describe('Test post image route', () => {
     it('Should post an image', async (done) => {
       const res = await uploadImageTestHelper();
-      expect(res.status).toEqual(201);
+      expect(res.status).toBe(201);
       done();
     });
   });
