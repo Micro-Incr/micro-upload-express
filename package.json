@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "tsc && node ./dist/server.ts",
+    "start": "node ./dist/server.ts",
+    "tsc": "tsc",
+    "build": "yarn run tsc",
     "test": "jest --detectOpenHandles",
     "test:watch": "jest --watch",
     "dev": "nodemon ./server/server.ts",
