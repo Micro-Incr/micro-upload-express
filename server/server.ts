@@ -5,7 +5,7 @@ import {PORT} from './config/baseConfig';
 import connect from './utils/db';
 
 connect.then(() => {
-    app.listen(PORT, () => {
+    app.listen(process.env.PORT || PORT, () => {
         console.log(`Server is running on port ${PORT}`);
     });
 });
