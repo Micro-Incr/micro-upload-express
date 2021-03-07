@@ -4,11 +4,11 @@ import {Request} from 'express';
 import path from 'path';
 import {MODE} from '../config/baseConfig';
 
-const uploadFolderName = MODE === 'development' ? '../images/devevelopment' : '../images/production';
+const uploadFolderName = MODE === 'development' ? 'images/development' : 'images/production';
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, path.join(__dirname, uploadFolderName));
+        cb(null, path.join(__dirname, '../../', uploadFolderName));
     },
     filename: function (req, file, cb) {
         cb(null, `${Date.now().toString()}-${file.originalname}`);

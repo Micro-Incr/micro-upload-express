@@ -22,7 +22,7 @@ async function uploadImageTestHelper() {
     .attach('image', path.join(__dirname, '..', '/mock/mock.png'));
   image = res.body.image;
   id = res.body._id;
-  filePath = path.join(__dirname, '..', '../images/devevelopment/') + image;
+  filePath = path.join(__dirname, '../../..', '/images/development/') + image;
   return res;
 }
 
@@ -52,7 +52,7 @@ describe('Image routes test', () => {
     });
 
     afterEach(async (done) => {
-      filePath = path.join(__dirname, '..', '../images/devevelopment/') + image;
+      filePath = path.join(__dirname, '../../..', '/images/development/') + image;
       fs.unlinkSync(filePath);
       done();
     });
@@ -92,7 +92,7 @@ describe('Image routes test', () => {
 
     afterEach(async (done) => {
       console.log(filePath);
-      filePath = path.join(__dirname, '..', '../images/devevelopment/') + image;
+      filePath = path.join(__dirname, '../../..', '/images/development/') + image;
       fs.unlinkSync(filePath);
       done();
     });
@@ -128,7 +128,7 @@ describe('Image routes test', () => {
     });
 
     afterEach(async (done) => {
-      filePath = path.join(__dirname, '..', '../images/devevelopment/') + image;
+      filePath = path.join(__dirname, '../../..', '/images/development/') + image;
       fs.unlinkSync(filePath);
       done();
     });
@@ -155,17 +155,20 @@ describe('Image routes test', () => {
 });
 
 afterAll(async () => {
-  fs.readdir(path.join(__dirname, '..', '../images/devevelopment/'), (err, files) => {
+  fs.readdir(path.join(__dirname, '../../..', '/images/development/'), (err, files) => {
     if (err) {
       throw err;
     }
 
     for (const file of files) {
-      fs.unlink(path.join(path.join(__dirname, '..', '../images/devevelopment/'), file), err => {
-        if (err) {
-          throw err;
+        if (file !== '.gitignore') {
+            fs.unlink(path.join(path.join(__dirname, '../../..', 'images/development/'), file), err => {
+                if (err) {
+                    throw err;
+                }
+                console.log('hi');
+            });
         }
-      });
     }
   });
   await mongoose.disconnect();
