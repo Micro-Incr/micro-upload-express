@@ -5,13 +5,16 @@
   "scripts": {
     "start": "node ./dist/server.ts",
     "tsc": "tsc",
-    "build": "npm run tsc",
+    "build": "yarn run tsc",
     "test": "jest --detectOpenHandles",
     "test:watch": "jest --watch",
     "dev": "nodemon ./server/server.ts",
     "eslint": "eslint .",
     "eslint:fix": "eslint . --fix",
     "prettier": "prettier ."
+  },
+  "engines": {
+    "yarn": "1.x"
   },
   "keywords": [],
   "author": "",
