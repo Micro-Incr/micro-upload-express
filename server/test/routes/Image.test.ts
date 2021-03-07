@@ -24,6 +24,7 @@ async function uploadImageTestHelper() {
   image = res.body.data.image;
   id = res.body.data._id;
   filePath = path.join(__dirname, '..', '../images/dev/') + image;
+  return res;
 }
 
 describe('Image routes test', () => {
@@ -38,7 +39,8 @@ describe('Image routes test', () => {
 
   describe('Test post image route', () => {
     it('Should post an image', async (done) => {
-      await uploadImageTestHelper();
+      const res = await uploadImageTestHelper();
+      expect(res.status).toEqual(201);
       done();
     });
   });
