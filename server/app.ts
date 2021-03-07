@@ -8,8 +8,10 @@ const app: Application = express();
 
 // middlewares
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cors());
+app.use(express.urlencoded({ extended: true }));
+app.use(cors({
+  origin: ['https://micro-upload.vercel.app', 'http://localhost:3000']
+}));
 app.use(express.static(path.join(__dirname, 'images')));
 
 
