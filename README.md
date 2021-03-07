@@ -24,7 +24,9 @@ yarn start
 - [x] Local server image upload
 - [ ] AWS S3 upload
 - [ ] Cloudinary s3 upload
-
+- [x] Heroku Upload
+- [ ] Multiple Image Upload
+- [ ] SQL support
 ___
 ## Contributors
 
