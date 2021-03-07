@@ -1,4 +1,4 @@
-# Micro Note Application In Express Typescript
+# Micro Upload Application In Express Typescript
 ___
 # Technologies Used 💻
 1. [Node js](https://nodejs.org) (Nodejs Runtime)
@@ -9,14 +9,21 @@ ___
 ***To Get Started Use:***
 * For development
 ```
-npm install
-npm run dev
+yarn
+yarn dev
 ```
 * For production
 ```
-npm install
-npm start
+yarn
+yarn start
 ```
+
+## TODO
+- [x] Add CRUD images
+- [x] Write tests for CRUD images
+- [x] Local server image upload
+- [ ] AWS S3 upload
+- [ ] Cloudinary s3 upload
 
 ___
 ## Contributors
