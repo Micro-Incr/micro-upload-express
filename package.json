@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./dist/server.ts",
     "tsc": "tsc",
-    "build": "yarn run tsc",
+    "build": "npm run tsc",
     "test": "jest --detectOpenHandles",
     "test:watch": "jest --watch",
     "dev": "nodemon ./server/server.ts",
