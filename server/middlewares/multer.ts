@@ -4,7 +4,7 @@ import {Request} from 'express';
 import path from 'path';
 import {MODE} from '../config/baseConfig';
 
-const uploadFolderName = MODE === 'development' ? '../images/dev' : '../images/production';
+const uploadFolderName = MODE === 'development' ? '../images/devevelopment' : '../images/production';
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
