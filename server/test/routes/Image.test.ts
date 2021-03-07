@@ -166,7 +166,6 @@ afterAll(async () => {
                 if (err) {
                     throw err;
                 }
-                console.log('hi');
             });
         }
     }
